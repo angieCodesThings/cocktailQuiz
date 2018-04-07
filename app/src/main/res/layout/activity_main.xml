@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.android.cocktailquiz.MainActivity">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The Bar Exam"
+        android:textSize="28sp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test your knowledge of boozy beverages"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your name here to begin"
+        android:inputType="textMultiLine"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="26dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:text="Question 1: This cocktail is basically a Negroni made with whiskey instead of gin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/one_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Old Fashioned"
+            android:textAppearance="?android:textAppearanceMedium" />
+        <RadioButton
+            android:id="@+id/one_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Boulevardier"
+            android:onClick="onRadioButtonClicked"
+            android:textAppearance="?android:textAppearanceMedium" />
+        <RadioButton
+            android:id="@+id/one_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manhattan"
+            android:textAppearance="?android:textAppearanceMedium" />
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question 2: Which country is Albarino from?"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/two_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Portugal"
+            android:onClick="onRadioButtonClicked"
+            android:textAppearance="?android:textAppearanceMedium" />
+        <RadioButton
+            android:id="@+id/two_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Argentina"
+            android:textAppearance="?android:textAppearanceMedium" />
+        <RadioButton
+            android:id="@+id/two_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chile"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question 3: Which champagne company was run by a woman?"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/three_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moët and Chandon"
+            android:textAppearance="?android:textAppearanceMedium" />
+        <RadioButton
+            android:id="@+id/three_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Veuve Clicquot "
+            android:onClick="onRadioButtonClicked"
+            android:textAppearance="?android:textAppearanceMedium" />
+        <RadioButton
+            android:id="@+id/three_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mumm"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:text="Question 4: What is the oldest brewery still in operation today?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/four_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Korschenbroich"
+            android:onClick="onRadioButtonClicked"
+            android:textAppearance="?android:textAppearanceMedium" />
+        <RadioButton
+            android:id="@+id/four_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yuengling "
+            android:textAppearance="?android:textAppearanceMedium" />
+        <RadioButton
+            android:id="@+id/four_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weihenstephan"
+            android:textAppearance="?android:textAppearanceMedium"
+            />
+
+    </RadioGroup>
+    <CheckBox
+        android:id="@+id/notify_me_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="Click here when done"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:onClick="tallyScore"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"
+            android:onClick="reset"
+            android:layout_gravity="center"
+            android:text="Reset" />
+
+</LinearLayout>
+</ScrollView>
